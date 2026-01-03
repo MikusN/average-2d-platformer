@@ -98,6 +98,7 @@ recoverytime = 0.5
 
 [node name="ExitLevel" parent="." instance=ExtResource("9_biamp")]
 position = Vector2(4569, 70)
+levelEnd = "uid://cbyq06rhrfy2"
 
 [node name="DeathZone" parent="." instance=ExtResource("10_cch3g")]
 position = Vector2(3301, 144)
