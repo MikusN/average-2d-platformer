@@ -150,11 +150,6 @@ func _physics_process(delta: float) -> void:
 			else:
 				Player_Mode = PlayerMode.regular	
 	
-	if Input.is_action_pressed("down"):
-		SPEED = 300.0
-		MaxHealth = 2100
-		health = 2100
-		defence = 100.0
 	
 	if Input.is_action_pressed("down") and is_on_floor() and taunting == false:
 		IwantDuckOrTaunt = "duck"
