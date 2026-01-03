@@ -15,6 +15,8 @@ func get_content(path) -> void:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
+			if file_name.ends_with(".remap"):
+				file_name = file_name.replace(".remap", "")
 			print("Found file: " + file_name)
 			create_button('%s/%s' % [dir.get_current_dir(), file_name],file_name)
 			file_name = dir.get_next()

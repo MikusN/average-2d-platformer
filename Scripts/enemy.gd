@@ -52,7 +52,7 @@ func _ready() -> void:
 	health_bar.init_health(health)
 
 func _process(delta):
-	if health >= 0 && playerdetected != null:
+	if health >= 0 && playerdetected != null && not dead:
 		animations.play("Walk")
 		position.x -= delta * horizontal_speed
 		
@@ -64,13 +64,13 @@ func _process(delta):
 	if !ray_cast.is_colliding():
 		position.y += delta * vertical_speed
 	
-	if health >=0 && playerdetected != null && AI_mode != AImode.Walking:
+	if health >=0 && playerdetected != null && AI_mode != AImode.Walking && not dead:
 		if playerdetected.position.x < global_position.x:
 			animations.flip_h = true
 		else:
 			animations.flip_h = false
 		
-	if health >=0 && playerdetected != null && AI_mode == AImode.Shotgun && recovered:
+	if health >=0 && playerdetected != null && AI_mode == AImode.Shotgun && recovered && not dead:
 		if reroll:
 			random = randi_range(1, 2)
 			reroll = false
