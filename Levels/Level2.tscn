@@ -73,23 +73,23 @@ camera_sync = NodePath("../Camera2D")
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Stomper" parent="Enemies" instance=ExtResource("8_v023s")]
-position = Vector2(52, -173)
+position = Vector2(48, -178)
 recoverytime = 0.5
 
 [node name="Stomper6" parent="Enemies" instance=ExtResource("8_v023s")]
-position = Vector2(-78, -14)
+position = Vector2(-81, -21)
 recoverytime = 0.5
 
 [node name="Stomper7" parent="Enemies" instance=ExtResource("8_v023s")]
-position = Vector2(7, -13)
+position = Vector2(6, -22)
 recoverytime = 0.5
 
 [node name="Stomper2" parent="Enemies" instance=ExtResource("8_v023s")]
-position = Vector2(936, 83)
+position = Vector2(933, 82)
 recoverytime = 0.5
 
 [node name="Stomper3" parent="Enemies" instance=ExtResource("8_v023s")]
-position = Vector2(683, 81)
+position = Vector2(682, 80)
 recoverytime = 0.5
 
 [node name="Stomper5" parent="Enemies" instance=ExtResource("8_v023s")]

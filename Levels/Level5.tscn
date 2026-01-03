@@ -69,7 +69,7 @@ camera_sync = NodePath("../Camera2D")
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Mafia" parent="Enemies" instance=ExtResource("8_ycmcf")]
-position = Vector2(73, 70)
+position = Vector2(72, 67)
 auto_act = true
 
 [node name="Mafia2" parent="Enemies" instance=ExtResource("8_ycmcf")]
@@ -77,7 +77,7 @@ position = Vector2(590, 65)
 auto_act = true
 
 [node name="Godfather" parent="Enemies" instance=ExtResource("9_nijbd")]
-position = Vector2(298, -12)
+position = Vector2(294, -19)
 auto_act = true
 Change_level = true
 
