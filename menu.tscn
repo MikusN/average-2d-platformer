@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://2rnssecloxxs"]
 
 [ext_resource type="Script" uid="uid://b1wprefrl0rca" path="res://Scripts/button.gd" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://j5yvnirgrbnx" path="res://Menu_CheckBoxes.gd" id="1_ytr4m"]
+[ext_resource type="Script" uid="uid://j5yvnirgrbnx" path="res://Scripts/Menu_CheckBoxes.gd" id="1_ytr4m"]
 [ext_resource type="AudioStream" uid="uid://d0llg1iryhkni" path="res://Music/An average menu.mp3" id="3_mae5d"]
 
 [node name="Menu" type="Node2D"]

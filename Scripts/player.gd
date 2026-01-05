@@ -259,6 +259,4 @@ func died():
 		var death_tween = get_tree().create_tween()
 		death_tween.tween_property(self, "position", position + Vector2(0, -48), .5)
 		death_tween.chain().tween_property(self,"position", position + Vector2(0,256),1)
-		
 		death_tween.tween_callback(func (): get_tree().change_scene_to_file(Current_scene))
-		

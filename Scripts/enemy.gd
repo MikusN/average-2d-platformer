@@ -2,18 +2,18 @@ extends Area2D
 
 class_name Enemy
 
-enum deathmode{
+enum deathmode{ #death animations
 	stomped,
 	falling
 }
-enum AImode{
-	Walking,
-	Shotgun
+enum AImode{ 
+	Walking, #only walks left and right
+	Shotgun # can fire bullets
 }
 enum AIstate{
-	Offensive,
-	Aggressive,
-	Defensive
+	Offensive, #randomly switches between Aggressive and Defensive
+	Aggressive, #Always approaches the player
+	Defensive #Always runs away from the player
 }
 
 @export var horizontal_speed = 30
@@ -43,10 +43,10 @@ var tempspeed = 0
 
 func _ready() -> void:
 	health_bar.visible = true
-	global.enemies += 1
+	global.enemies += 1 #Counts the enemy
 	if show_healthbar == false:
 		health_bar.visible = false
-	if playerdetected == null and auto_act == true:
+	if playerdetected == null and auto_act == true: #makes the detection circle bigger so it colides with the player
 		detector.scale.x = 1000
 		detector.scale.y = 1000
 	health_bar.init_health(health)
@@ -61,7 +61,7 @@ func _process(delta):
 			recovered = false
 			get_tree().create_timer(recoverytime).timeout.connect(recover)
 			
-	if !ray_cast.is_colliding():
+	if !ray_cast.is_colliding(): #give the gravity
 		position.y += delta * vertical_speed
 	
 	if health >=0 && playerdetected != null && AI_mode != AImode.Walking && not dead:
@@ -76,7 +76,7 @@ func _process(delta):
 			reroll = false
 			get_tree().create_timer(rerolltime).timeout.connect(rerolling)
 		
-		#make AI stop moving when player dies
+		#AI movement states
 		if AI_State == AIstate.Aggressive:
 			if (playerdetected.position.x < global_position.x && horizontal_speed < 0) or (playerdetected.position.x > global_position.x && horizontal_speed > 0):
 				horizontal_speed = horizontal_speed * -1
@@ -104,8 +104,9 @@ func _process(delta):
 			die()
 
 func hurtEnemy(PlayerDamage):
-	health -= PlayerDamage
-	health_bar.set_health(health)
+	if not dead: #This should prevent crashing
+		health -= PlayerDamage
+		health_bar.set_health(health)
 
 func die():
 	if Death_Anim == deathmode.stomped:

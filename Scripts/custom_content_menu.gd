@@ -10,17 +10,17 @@ func _ready() -> void:
 	get_content(dir_path)
 
 func get_content(path) -> void:
-	var dir = DirAccess.open(path)
+	var dir = DirAccess.open(path) #access files
 	if dir:
-		dir.list_dir_begin()
+		dir.list_dir_begin() #starts the list
 		var file_name = dir.get_next()
-		while file_name != "":
-			if file_name.ends_with(".remap"):
-				file_name = file_name.replace(".remap", "")
+		while file_name != "": #find everything that is in the map
+			if file_name.ends_with(".remap"): 
+				file_name = file_name.replace(".remap", "") #removes .remap because sometimes godot adds .remap
 			print("Found file: " + file_name)
-			create_button('%s/%s' % [dir.get_current_dir(), file_name],file_name)
+			create_button('%s/%s' % [dir.get_current_dir(), file_name],file_name) #creates a button of the custom thing
 			file_name = dir.get_next()
-		dir.list_dir_end()
+		dir.list_dir_end() #ends the list
 	else:
 		print("An error occurred when trying to access the path.")
 		

@@ -3,9 +3,9 @@ extends Area2D
 class_name EnemyMafia
 
 enum AIstate{
-	Offensive,
-	Aggressive,
-	Defensive
+	Offensive, #randomly switches between Aggressive and Defensive
+	Aggressive, #Always approaches the player
+	Defensive #Always runs away from the player
 }
 
 @export var horizontal_speed = 30
@@ -59,7 +59,7 @@ func _ready() -> void:
 	global.enemies += 1
 	if show_healthbar == false:
 		health_bar.visible = false
-	if playerdetected == null and auto_act == true:
+	if playerdetected == null and auto_act == true: #makes the detection circle bigger so it colides with the player
 		detector.scale.x = 1000
 		detector.scale.y = 1000
 	health_bar.init_health(health)
@@ -67,7 +67,7 @@ func _ready() -> void:
 		cosmeticRandom()
 
 func _process(delta):
-	if boss:
+	if boss: #checks if the enemy is a boss
 		hair.visible = false
 		hat.visible = false
 		misc.visible = false
@@ -91,16 +91,14 @@ func _process(delta):
 	if health >=0 && playerdetected != null && not dead:
 		if playerdetected.position.x < global_position.x:
 			animations.flip_h = true
-			if boss != true:
-				hair.flip_h = true
-				hat.flip_h = true
-				misc.flip_h = true
+			hair.flip_h = true
+			hat.flip_h = true
+			misc.flip_h = true
 		else:
 			animations.flip_h = false
-			if boss != true:
-				hair.flip_h = false
-				hat.flip_h = false
-				misc.flip_h = false
+			hair.flip_h = false
+			hat.flip_h = false
+			misc.flip_h = false
 		
 	if health >=0 && playerdetected != null && recovered && dodging == false && not dead:
 		if reroll:
@@ -108,7 +106,7 @@ func _process(delta):
 			reroll = false
 			get_tree().create_timer(rerolltime).timeout.connect(rerolling)
 		
-		#make AI stop moving when player dies
+		#AI movement states
 		if AI_State == AIstate.Aggressive:
 			if (playerdetected.position.x < global_position.x && horizontal_speed < 0) or (playerdetected.position.x > global_position.x && horizontal_speed > 0):
 				horizontal_speed = horizontal_speed * -1
@@ -135,14 +133,14 @@ func _process(delta):
 			die()
 
 func hurtEnemy(PlayerDamage):
-	health -= PlayerDamage
-	health_bar.set_health(health)
+	if not dead: #This should prevent crashing
+		health -= PlayerDamage
+		health_bar.set_health(health)
 
 func die():
-		if boss != true:
-			hair.visible = false
-			hat.visible = false
-			misc.visible = false
+		hair.visible = false
+		hat.visible = false
+		misc.visible = false
 		
 		horizontal_speed = 0
 		vertical_speed = 0
@@ -164,6 +162,7 @@ func stopdodge():
 	dodging = false
 
 func cosmeticRandom():
+	#the thing that randomizes the cosmetics
 	var hatstyle = randi_range(1,3)
 	var hairstyle = randi_range(1,4)
 	var miscitems = randi_range(1,3)
@@ -199,7 +198,7 @@ func cosmeticRandom():
 		misc.play("sunglasses")
 
 func Summoning():
-	if summoner:
+	if summoner && not dead:
 		for x in goon_count:
 			var enemy = goons.instantiate()
 			enemy.position = position

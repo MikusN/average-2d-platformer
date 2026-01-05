@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bcnqw4qsfnntm" path="res://textures/bricks.png" id="3_4yh7d"]
 [ext_resource type="Texture2D" uid="uid://d1rirjmjh7c2v" path="res://textures/IronWalls.png" id="4_kn3ki"]
 [ext_resource type="PackedScene" uid="uid://c6v8w5vqcmqa6" path="res://Entities/player.tscn" id="5_8ml7l"]
-[ext_resource type="Script" uid="uid://d15nwrpie8bov" path="res://Levels/KillCounter.gd" id="5_kn3ki"]
+[ext_resource type="Script" uid="uid://d15nwrpie8bov" path="res://Scripts/KillCounter.gd" id="5_kn3ki"]
 [ext_resource type="Script" uid="uid://dhy2mcbkkl26p" path="res://Scripts/spawner.gd" id="6_3sm0n"]
 [ext_resource type="PackedScene" uid="uid://xbgni1a8lr0x" path="res://Entities/Enemies/Mercs/mercShotty.tscn" id="6_k3an4"]
 [ext_resource type="PackedScene" uid="uid://cgeosfih1riti" path="res://Entities/stomper.tscn" id="7_ifjt6"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dqtyqupmieste" path="res://textures/Spinny thing.png" id="11_k3an4"]
 [ext_resource type="PackedScene" uid="uid://btm3rntawj3ev" path="res://Entities/Enemies/Mercs/mercRifle.tscn" id="11_mo5sh"]
 [ext_resource type="PackedScene" uid="uid://6mjy7jqd2boq" path="res://Entities/Enemies/Mafia/MafiaGoons.tscn" id="13_famn7"]
-[ext_resource type="Script" uid="uid://boa0unmidw3u" path="res://Levels/spawner_boss.gd" id="15_d75p2"]
+[ext_resource type="Script" uid="uid://boa0unmidw3u" path="res://Scripts/spawner_boss.gd" id="15_d75p2"]
 [ext_resource type="PackedScene" uid="uid://ckii40e7slgih" path="res://Entities/Enemies/Mafia/MafiaGodfather.tscn" id="16_exqbx"]
 [ext_resource type="PackedScene" uid="uid://dyc3r0j7kdfcl" path="res://Entities/death_zone.tscn" id="17_d75p2"]
 

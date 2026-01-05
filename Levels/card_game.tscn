@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://m5cx2brw1u0m"]
 
-[ext_resource type="Script" uid="uid://fcs6onr4vmnv" path="res://Levels/card_gameScript.gd" id="1_ga22d"]
+[ext_resource type="Script" uid="uid://fcs6onr4vmnv" path="res://Scripts/card_gameScript.gd" id="1_ga22d"]
 [ext_resource type="Texture2D" uid="uid://desfoljmpmbh6" path="res://textures/Cards/Blank.png" id="1_hq4tf"]
 [ext_resource type="AudioStream" uid="uid://bo22385enl104" path="res://Music/Just A Simple Card Game.mp3" id="3_cwkyt"]
 

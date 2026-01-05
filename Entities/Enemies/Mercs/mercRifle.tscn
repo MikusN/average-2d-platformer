@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://de5y83nilh7sx" path="res://Scripts/EnemyScripts/MercRifleGun.gd" id="12_xbsla"]
 [ext_resource type="Texture2D" uid="uid://t5irdrbhhbxd" path="res://EnemySprites/Mercs/Arms/Rifle/rifle1.png" id="13_wt32t"]
 [ext_resource type="Texture2D" uid="uid://dd4pdpcvyhhdo" path="res://EnemySprites/Mercs/Arms/Rifle/rifle2.png" id="14_k0lr1"]
-[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://NonLevelScenes/HPbar.tscn" id="15_dy5l0"]
+[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://VitalsScenes/HPbar.tscn" id="15_dy5l0"]
 [ext_resource type="AudioStream" uid="uid://d3q6cc4el61fo" path="res://Sounds/AssaultRifle Fire.ogg" id="15_wt32t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6g2w8"]
@@ -158,6 +158,7 @@ position = Vector2(12, -2)
 
 [node name="Fire" type="AudioStreamPlayer2D" parent="gun"]
 stream = ExtResource("15_wt32t")
+volume_db = -4.0
 
 [node name="HealthBar" parent="." instance=ExtResource("15_dy5l0")]
 offset_left = -17.0

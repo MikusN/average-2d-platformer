@@ -6,7 +6,7 @@ extends Node2D
 @onready var detectionrange = $"../Detection"
 @onready var firesound = $Fire
 
-@export var currentDMG : float = 0.4 # was 1 DMG
+@export var currentDMG : float = 0.4
 @export var firingCD = 0.4
 @export var mag = 15
 @export var reloadtime = 4

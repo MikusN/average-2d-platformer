@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://cyth5kbk1ykeq" path="res://Scripts/EnemyScripts/MercWeaponSniper.gd" id="12_p4wrg"]
 [ext_resource type="Texture2D" uid="uid://b2amfu0y7uiag" path="res://EnemySprites/Mercs/Arms/Sniper/Sniper1.png" id="13_p4wrg"]
 [ext_resource type="Texture2D" uid="uid://c8yv0l8esaxq4" path="res://EnemySprites/Mercs/Arms/Sniper/Sniper2.png" id="14_clvxt"]
-[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://NonLevelScenes/HPbar.tscn" id="15_clvxt"]
+[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://VitalsScenes/HPbar.tscn" id="15_clvxt"]
 [ext_resource type="AudioStream" uid="uid://dat2jnvfm14sb" path="res://Sounds/Sniper.mp3" id="15_e6ckh"]
 [ext_resource type="AudioStream" uid="uid://bvhh8si1mgygq" path="res://Sounds/N51_MadnessProjectNexus/Aggro.wav" id="17_jbd24"]
 [ext_resource type="AudioStream" uid="uid://de35pqadimvag" path="res://Sounds/N51_MadnessProjectNexus/Cheer.wav" id="18_geq2c"]
@@ -170,6 +170,7 @@ target_position = Vector2(1963, 0)
 
 [node name="Fire" type="AudioStreamPlayer2D" parent="gun"]
 stream = ExtResource("15_e6ckh")
+volume_db = -3.0
 
 [node name="HealthBar" parent="." instance=ExtResource("15_clvxt")]
 offset_left = -17.0
@@ -179,11 +180,11 @@ offset_bottom = -19.0
 
 [node name="Alert" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_jbd24")
-volume_db = 12.0
+volume_db = 9.0
 
 [node name="Warn" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_geq2c")
-volume_db = 12.0
+volume_db = 9.0
 
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_entered" from="DetectionGun" to="gun" method="_on_detection_gun_body_entered"]

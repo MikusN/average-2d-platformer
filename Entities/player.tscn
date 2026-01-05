@@ -36,9 +36,9 @@
 [ext_resource type="PackedScene" uid="uid://cpmms0bfo24dp" path="res://things/shotty.tscn" id="38_akj54"]
 [ext_resource type="AudioStream" uid="uid://bfu6qkp34sp5y" path="res://Music/The dance.mp3" id="39_qg8ml"]
 [ext_resource type="AudioStream" uid="uid://d0llg1iryhkni" path="res://Music/An average menu.mp3" id="41_nmb0b"]
-[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://NonLevelScenes/HPbar.tscn" id="42_llc5e"]
-[ext_resource type="PackedScene" uid="uid://x6yurkutkg7b" path="res://NonLevelScenes/DefenceBar.tscn" id="43_nmb0b"]
-[ext_resource type="PackedScene" uid="uid://bnecravo6u6yx" path="res://NonLevelScenes/HPText.tscn" id="44_xaxei"]
+[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://VitalsScenes/HPbar.tscn" id="42_llc5e"]
+[ext_resource type="PackedScene" uid="uid://x6yurkutkg7b" path="res://VitalsScenes/DefenceBar.tscn" id="43_nmb0b"]
+[ext_resource type="PackedScene" uid="uid://bnecravo6u6yx" path="res://VitalsScenes/HPText.tscn" id="44_xaxei"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
 animations = [{

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://uwnk7ddq4e2v"]
 
-[ext_resource type="Script" uid="uid://c1xhr1bv46xxs" path="res://custom_content_menu.gd" id="1_i20lc"]
+[ext_resource type="Script" uid="uid://c1xhr1bv46xxs" path="res://Scripts/custom_content_menu.gd" id="1_i20lc"]
 [ext_resource type="Script" uid="uid://b1wprefrl0rca" path="res://Scripts/button.gd" id="2_i20lc"]
 
 [node name="CustomContent" type="Node2D"]

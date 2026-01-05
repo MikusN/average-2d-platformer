@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://c6tonqwri1jqy" path="res://Scripts/EnemyScripts/MafiaGoonGun.gd" id="6_8e810"]
 [ext_resource type="Texture2D" uid="uid://drebkmg84espo" path="res://EnemySprites/Mafia/Arms/Untitled10_20251217090421.png" id="7_jfhmo"]
 [ext_resource type="Texture2D" uid="uid://chm48hpulvstm" path="res://EnemySprites/Mafia/Arms/Untitled10_20251217090443.png" id="8_ktu6f"]
-[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://NonLevelScenes/HPbar.tscn" id="10_1ha5l"]
+[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://VitalsScenes/HPbar.tscn" id="10_1ha5l"]
 [ext_resource type="AudioStream" uid="uid://dn0wp5ilhcigk" path="res://Sounds/TommyShooting.mp3" id="10_qji2o"]
 [ext_resource type="Texture2D" uid="uid://ce6rgg51ga765" path="res://EnemySprites/Mafia/Goons/Mafia Gooners_20251217094312.png" id="11_l020t"]
 [ext_resource type="Texture2D" uid="uid://b651glhnkva1d" path="res://EnemySprites/Mafia/Goons/Mafia Gooners_20251217094309.png" id="12_qji2o"]
@@ -214,6 +214,7 @@ position = Vector2(20, -3)
 
 [node name="Fire" type="AudioStreamPlayer2D" parent="gun"]
 stream = ExtResource("10_qji2o")
+volume_db = -4.0
 
 [node name="HealthBar" parent="." instance=ExtResource("10_1ha5l")]
 offset_left = -17.0

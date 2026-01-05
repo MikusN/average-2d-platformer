@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://l1m712xx6lyb" path="res://EnemySprites/Mafia/Goons/Mafia Gooners_20251217094252.png" id="13_wg622"]
 [ext_resource type="Texture2D" uid="uid://dgofjyf44earf" path="res://EnemySprites/Mafia/Goons/Mafia Gooners_20251217094257.png" id="14_2psbf"]
 [ext_resource type="Texture2D" uid="uid://dndktbxaa7tx0" path="res://EnemySprites/Mafia/Goons/Mafia Gooners_20251217094245.png" id="15_gm2b3"]
-[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://NonLevelScenes/HPbar.tscn" id="16_h1esx"]
+[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://VitalsScenes/HPbar.tscn" id="16_h1esx"]
 [ext_resource type="Texture2D" uid="uid://bllydvqiuqgok" path="res://EnemySprites/Mafia/Goons/Mafia Gooners_20251217094302.png" id="16_r837i"]
 [ext_resource type="Texture2D" uid="uid://cpcjfp541pfex" path="res://EnemySprites/Mafia/Goons/Mafia Gooners_20251217094622.png" id="17_enfeh"]
 
@@ -204,6 +204,7 @@ position = Vector2(20, -3)
 
 [node name="Fire" type="AudioStreamPlayer2D" parent="gun"]
 stream = ExtResource("9_tr0mc")
+volume_db = -4.0
 
 [node name="HealthBar" parent="." instance=ExtResource("16_h1esx")]
 offset_left = -17.0

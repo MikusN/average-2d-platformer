@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://canpvpesiofr6" path="res://EnemySprites/Mercs/Arms/Shotty/Shottyfire.png" id="12_h020y"]
 [ext_resource type="Script" uid="uid://diao1vs4xibe6" path="res://Scripts/EnemyScripts/MercWeapon.gd" id="14_8s87t"]
 [ext_resource type="AudioStream" uid="uid://cl40ft6octcta" path="res://Sounds/Shotgun fire.ogg" id="15_e2y2x"]
-[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://NonLevelScenes/HPbar.tscn" id="15_pqtnk"]
+[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://VitalsScenes/HPbar.tscn" id="15_pqtnk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6g2w8"]
 animations = [{
@@ -156,7 +156,7 @@ position = Vector2(18, -3)
 
 [node name="Fire" type="AudioStreamPlayer2D" parent="gun"]
 stream = ExtResource("15_e2y2x")
-volume_db = -1.0
+volume_db = -5.0
 
 [node name="HealthBar" parent="." instance=ExtResource("15_pqtnk")]
 offset_left = -17.0

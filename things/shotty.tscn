@@ -41,4 +41,4 @@ position = Vector2(26, -3)
 
 [node name="Fire" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_oujsd")
-volume_db = -2.0
+volume_db = -7.0
