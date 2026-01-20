@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bnsobl6lul6no" path="res://Scripts/stomper.gd" id="1_dq5x7"]
 [ext_resource type="Texture2D" uid="uid://2t7xxi1y8mdj" path="res://EnemySprites/Stomper/Stomper.png" id="2_dq5x7"]
 [ext_resource type="Texture2D" uid="uid://1ravn8gsh4r5" path="res://EnemySprites/Stomper/Stomper2.png" id="3_ralqc"]
-[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://VitalsScenes/HPbar.tscn" id="5_ralqc"]
+[ext_resource type="PackedScene" uid="uid://dkqrbo1o6fy4p" path="res://NonLevelScenes/HPbar.tscn" id="5_ralqc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3eb6h"]
 animations = [{

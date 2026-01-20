@@ -87,6 +87,8 @@ func _ready():
 		defence_bar.visible = false
 	if health >= MaxHealth:
 		MaxHealth = health
+	if Current_scene == null:
+		Current_scene = get_parent().get_scene_file_path()
 	health_bar.init_health(MaxHealth)
 
 func _process(_delta):
